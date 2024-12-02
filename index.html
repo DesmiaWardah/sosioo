@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fakultas Sains dan Teknologi</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- DN: ini link cdn dari fontawesome, bisa didapet dari login ke fontawesome terus create kit -->
+    <script
+      src="https://kit.fontawesome.com/4122756b30.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Login Page -->
+    <div class="container" id="login-page">
+      <div class="header">
+        <img src="logouin.jpg" alt="University Logo" />
+        <h1>FAKULTAS SAINS DAN TEKNOLOGI</h1>
+      </div>
+      <div class="login-title">Halaman Login</div>
+      <div class="form-container">
+        <h3>Masuk dengan Username atau Email</h3>
+        <div class="form-group">
+          <!-- DN: fas fa icon butuh cdn dari fontawesome -->
+          <label for="username"
+            ><i class="fas fa-user"></i> Username atau NIM</label
+          >
+          <input type="text" id="username" name="username" />
+        </div>
+        <div class="form-group">
+          <!-- DN: fas fa icon butuh cdn dari fontawesome -->
+          <label for="password"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div class="form-actions">
+          <button onclick="login()">MASUK SEKARANG</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-page" class="hidden">
+      <div class="header">
+        <img src="logouin.jpg" alt="University Logo" />
+        <h1>FAKULTAS SAINS DAN TEKNOLOGI</h1>
+      </div>
+      <div class="nav-homepage">
+        <div class="login-title">Homepage</div>
+        <div class="dropdown">
+          <button onclick="handleDropdown()" class="dropbtn">Lantai</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#" onclick="showFloor(1)">Lantai 1</a>
+            <a href="#" onclick="showFloor(3)">Lantai 3</a>
+            <a href="#" onclick="showFloor(4)">Lantai 4</a>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <img
+          src="https://storage.googleapis.com/a1aa/image/wGMmmOtrJbo2K9fkiQybSfj9V3XyzMUQ0fhhY1Rt05cNjDYnA.jpg"
+          alt="University Logo"
+          height="40"
+        />
+        <h1>FAKULTAS SAINS DAN TEKNOLOGI</h1>
+        <div class="menu">
+          <a href="#" onclick="showStatusPage()">STATUS RUANGAN</a>
+          <a href="#" onclick="showBorrowingForm()">FORMULIR PEMINJAMAN</a>
+          <a href="#" onclick="logout()">LOGOUT</a>
+        </div>
+      </div>
+      <div class="content">
+        <h2 id="floor-title">LANTAI 1</h2>
+        <div class="rooms" id="floor-rooms"></div>
+      </div>
+    </div>
+
+    <!-- Status Page -->
+    <div id="status-page" class="hidden">
+      <div class="container">
+        <div class="header">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/XETkVbg0yH5HDp6GsfLlVSupFL5rDcf3D7RwebAPkGnLzDYnA.jpg"
+            alt="University Logo"
+            height="40"
+          />
+          <h1>FAKULTAS SAINS DAN TEKNOLOGI</h1>
+        </div>
+        <div class="status">STATUS RUANGAN</div>
+        <div class="floor">LANTAI 4</div>
+        <div class="rooms">
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 401 telah dipinjam.')"
+          >
+            Ruang 401
+          </div>
+          <div class="room available" onclick="alert('Ruang 402 tersedia.')">
+            Ruang 402
+          </div>
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 403 telah dipinjam.')"
+          >
+            Ruang 403
+          </div>
+          <div class="room available" onclick="alert('Ruang 404 tersedia.')">
+            Ruang 404
+          </div>
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 405 telah dipinjam.')"
+          >
+            Ruang 405
+          </div>
+          <div class="room available" onclick="alert('Ruang 406 tersedia.')">
+            Ruang 406
+          </div>
+          <div class="room available" onclick="alert('Ruang 407 tersedia.')">
+            Ruang 407
+          </div>
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 408 telah dipinjam.')"
+          >
+            Ruang 408
+          </div>
+          <div class="room available" onclick="alert('Ruang 409 tersedia.')">
+            Ruang 409
+          </div>
+          <div class="room available" onclick="alert('Ruang 410 tersedia.')">
+            Ruang 410
+          </div>
+          <div class="room available" onclick="alert('Ruang 409 tersedia.')">
+            Ruang 411
+          </div>
+          <div class="room available" onclick="alert('Ruang 410 tersedia.')">
+            Ruang 412
+          </div>
+        </div>
+
+        <div class="floor">LANTAI 3</div>
+        <div class="rooms">
+          <div class="room available" onclick="alert('Ruang 301 tersedia.')">
+            Ruang 301
+          </div>
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 302 telah dipinjam.')"
+          >
+            Ruang 302
+          </div>
+          <div class="room available" onclick="alert('Ruang 303 tersedia.')">
+            Ruang 303
+          </div>
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 304 telah dipinjam.')"
+          >
+            Ruang 304
+          </div>
+          <div class="room available" onclick="alert('Ruang 305 tersedia.')">
+            Ruang 305
+          </div>
+          <div class="room available" onclick="alert('Ruang 306 tersedia.')">
+            Ruang 306
+          </div>
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 307 telah dipinjam.')"
+          >
+            Ruang 307
+          </div>
+          <div class="room available" onclick="alert('Ruang 308 tersedia.')">
+            Ruang 308
+          </div>
+        </div>
+        <div class="floor">LANTAI 1</div>
+        <div class="rooms">
+          <div class="room available" onclick="alert('Ruang 101 tersedia.')">
+            Aula Utama
+          </div>
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 102 telah dipinjam.')"
+          >
+            Perpustakaan
+          </div>
+          <div class="room available" onclick="alert('Ruang 103 tersedia.')">
+            Mushola
+          </div>
+          <div
+            class="room occupied"
+            onclick="alert('Ruang 104 telah dipinjam.')"
+          >
+            Lab Riset Dan Risesdensi
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Borrowing Form -->
+    <div id="borrowing-form" class="hidden">
+      <div class="container">
+        <div class="form-title">FORMULIR PEMINJAMAN</div>
+        <div class="form-content">
+          <p>
+            <span>Nama:</span>
+            <input type="text" id="borrower-name" placeholder="Nama Anda" />
+          </p>
+          <p>
+            <span>NIM:</span>
+            <input type="text" id="borrower-nim" placeholder="NIM Anda" />
+          </p>
+          <p>
+            <span>Ruang yang dipinjam:</span>
+            <input
+              type="text"
+              id="borrowed-room"
+              placeholder="Ruang yang dipinjam"
+              readonly
+            />
+          </p>
+          <button class="submit-button" onclick="submitBorrowing()">
+            Ajukan Peminjaman
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verification Page -->
+    <div id="verification-page" class="hidden">
+      <div class="container">
+        <div class="header">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/XETkVbg0yH5HDp6GsfLlVSupFL5rDcf3D7RwebAPkGnLzDYnA.jpg"
+            alt="University Logo"
+            height="40"
+          />
+          <h1>VERIFIKASI PEMINJAMAN</h1>
+        </div>
+        <div class="form-title">Daftar Peminjaman</div>
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Ruang</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="borrow-request-list">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="actions">
+                  <button class="approve" onclick="approveRequest(this)">
+                    Approve
+                  </button>
+                  <button class="reject" onclick="rejectRequest(this)">
+                    Reject
+                  </button>
+                </td>
+              </tr>
+              <!-- Additional requests can be added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>

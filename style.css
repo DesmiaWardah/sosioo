@@ -1,0 +1,317 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    /* DN: mending width disini 100% tapi tar belajar tentang responsive */
+    width: 320px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* DN: ini contoh cara pake responsive media, ngasih styling khusus kalo misal
+    lebar device maksimal 500px, jadi tampilannya tetep bagus kalo mau dipake di laptop/hp
+    bisa eksplor lagi aja. saran link (https://www.programiz.com/css/responsive-web-design)*/
+@media (max-width: 500px) {
+
+    /* This style rule will only apply when the width
+    of the viewport is at least 500px */
+    .container {
+        width: 480px;
+    }
+}
+
+/* Header Styles */
+/* DN: aku hapus background-color, soalnya di ui/ux header logo backgroudnya putih */
+.header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+}
+
+.header h1 {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Login Page */
+.login-title {
+    background-color: #ffd700;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+    /* margin-right: 10px; */
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.form-group label i {
+    margin-right: 10px;
+}
+
+.form-actions button {
+    background-color: #ffd700;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Homepage Layout */
+#home-page {
+    width: 100%;
+    max-width: 500px;
+}
+
+.nav-homepage {
+    display: flex;
+    background-color: #ffd700;
+    justify-content: space-between;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.content h2 {
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.content .rooms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.room {
+    background-color: #ffd700;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    flex: 1 1 30%;
+    max-width: 30%;
+    cursor: pointer;
+}
+
+.room.large {
+    flex: 1 1 60%;
+    max-width: 60%;
+}
+
+/* Room Status Layout */
+#status-page .container {
+    width: 100%;
+    /* DN: max-width disini mending dihapus, widthnya tetep 100% buat default
+    tapi manfaatin responsive media yang sebelumnya buat ngatur besaran width tergantung buka
+    webnya di device mana */
+    max-width: 300px;
+}
+
+.status {
+    background-color: #ffd700;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.floor {
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.rooms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.room.available {
+    background-color: #ffd700;
+    color: black;
+}
+
+.room.occupied {
+    background-color: #ff4c4c;
+}
+
+/* Borrowing Form Styles */
+.form-title {
+    background-color: #ffd700;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.form-content {
+    background-color: #ffd700;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+
+.form-content p {
+    margin: 10px 0;
+}
+
+.form-content span {
+    font-weight: bold;
+}
+
+.submit-button {
+    background-color: #ffd700;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Verification Page Styles */
+.verification-button {
+    background-color: #ffc107;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content th,
+.content td {
+    padding: 8px;
+    text-align: left;
+}
+
+.content th {
+    background-color: #ffc107;
+    color: black;
+}
+
+.content td {
+    background-color: #fff;
+}
+
+.content .highlight {
+    background-color: #ffc107;
+}
+
+.content .actions {
+    display: flex;
+    gap: 5px;
+}
+
+.content .actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+.content .actions .reject {
+    background-color: #dc3545;
+}
+
+.content .actions .approve {
+    background-color: #28a745;
+}
+
+/* DN: Menu lantai dibikin dropdown menu */
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
